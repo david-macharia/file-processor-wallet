@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+message FileUploadDesc {
+  string path = 1;
+  string objectId = 2;
+}
+message FileUploadRes{
+    string status=1;
+}
+service  UploadFile{
+    rpc uploadFile(FileUploadDesc) returns (FileUploadRes);
+}
